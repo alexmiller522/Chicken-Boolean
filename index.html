@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <script>
-        var audio = new Audio('chicken.mp3');
+        
         function onLoadFunctions() {
             
             
@@ -11,9 +11,17 @@
         window.onload = onLoadFunctions;
         
         
-        document.addEventListener('mousemove', e => {
-          audio.play();
-        });
+
+        
+        function playMusic(){
+            var audio = new Audio('chicken.mp3');
+            if(audio.paused){
+                audio.play();
+            }else{
+                audio.stop();
+            }
+            
+        }
         
         
         function checkForBool() {
