@@ -15,10 +15,10 @@
         
         function playMusic(){
             var audio = new Audio('chicken.mp3');
-            if(audio.paused){
-                audio.play();
-            }else{
+            if(.duration > 0 && !audio.paused){
                 audio.stop();
+            }else{
+                audio.play();
             }
             
         }
