@@ -5,12 +5,16 @@
         function onLoadFunctions() {
             
             var audio = new Audio('chicken.mp3');
-            audio.autoplay = true;
-            audio.muted = true;
-            audio.play(); 
+             
         }
         
         window.onload = onLoadFunctions;
+        
+        
+        document.addEventListener('mousemove', e => {
+          audio.play();
+        });
+        
         
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
