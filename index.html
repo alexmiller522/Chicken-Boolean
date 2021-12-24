@@ -26,7 +26,7 @@
         
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
-            if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boolean") ){
+            if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
                alert("FALSE")
                alert("YOU DO NOT NEED CHICKEN BUILLON!")
                alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
@@ -57,6 +57,9 @@
         <input id="meal" type="text" name="Fname">
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
+    <h2>Should you put builion in your meal?</h2>
+    <img class = "booleans" src="true.png" alt="TRUE">
+    <img class = "booleans" src="false.png" alt="FALSE">
     
     <button type="button" onclick="playMusic()">Play some JAMS</button>
     
