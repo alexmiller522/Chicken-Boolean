@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <head>
     <script>
+        
+        function onLoadFunctions() {
+            //auto play the music
+            var audio = new Audio('chicken.mp3');
+            audio.play();   
+            
+            
+        }
+        
+        window.onload = onLoadFunctions;
+        
+        
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
             if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boolean") ){
@@ -13,17 +25,7 @@
                 alert("You will disappoint guests without using chicken buillon")
             }
         }
-        
-        function playMusic(){
-            var loc = window.location.pathname;
-            var dir = loc.substring(0, loc.lastIndexOf('/'));   
-            console.log("This is the curr dir: " + dir)
-            
-            var audio = new Audio('chicken.mp3');
-            audio.play();
-  
-        }
-        
+          
         
     </script>
     
