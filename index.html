@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <head>
     <script>
+        function checkForBool() {
+        var mealName = document.getElementById("meal");
+        if(mealName === "chicken buillon"){
+           alert("FALSE")
+           alert("YOU DO NOT NEED CHICKEN BUILLON!")
+           alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
+        }else{
+            alert("TRUE")
+            alert("This will taste SO GOOD with chicken boolean")
+            alert("You will disappoint guests without using chicken buillon")
+        }
+        }
     </script>
     
     <style></style>
@@ -13,9 +25,9 @@
 
     <form>
         What are you making?
-        <input type="text" name="Fname">
+        <input id="meal" type="text" name="Fname">
     </form>
-    <button type="button" onclick="checker()">Check</button>
+    <button type="button" onclick="checkForBool()">Check</button>
 
 </body>
 
