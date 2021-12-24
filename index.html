@@ -11,10 +11,10 @@
         window.onload = onLoadFunctions;
         
         
-
+        var audio = new Audio('chicken.mp3');
         
         function playMusic(){
-            var audio = new Audio('chicken.mp3');
+            
             if(audio.duration > 0 && !audio.paused){
                 audio.stop();
             }else{
