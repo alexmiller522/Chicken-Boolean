@@ -3,16 +3,14 @@
     <script>
         
         function onLoadFunctions() {
-              //some auto load functions maybe?
+            
+            var audio = new Audio('chicken.mp3');
+            audio.autoplay = true;
+            audio.muted = true;
+            audio.play(); 
         }
         
         window.onload = onLoadFunctions;
-        
-        document.body.addEventListener("mousemove", function () {
-            //auto play the music when someone moves their mouse
-            var audio = new Audio('chicken.mp3');
-            audio.play(); 
-        })
         
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
