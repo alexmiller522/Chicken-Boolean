@@ -2,17 +2,27 @@
 <head>
     <script>
         function checkForBool() {
-        var mealName = document.getElementById("meal").value;
-        if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boolean") ){
-           alert("FALSE")
-           alert("YOU DO NOT NEED CHICKEN BUILLON!")
-           alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
-        }else{
-            alert("TRUE")
-            alert("This will taste SO GOOD with chicken boolean")
-            alert("You will disappoint guests without using chicken buillon")
+            var mealName = document.getElementById("meal").value;
+            if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boolean") ){
+               alert("FALSE")
+               alert("YOU DO NOT NEED CHICKEN BUILLON!")
+               alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
+            }else{
+                alert("TRUE")
+                alert("This will taste SO GOOD with chicken boolean")
+                alert("You will disappoint guests without using chicken buillon")
+            }
         }
+        
+        function playMusic(){
+            var loc = window.location.pathname;
+            var dir = loc.substring(0, loc.lastIndexOf('/'));   
+            console.log("This is the curr dir: " + dir)
+            
+  
         }
+        
+        
     </script>
     
     <style type="text/css">
@@ -32,6 +42,8 @@
         <input id="meal" type="text" name="Fname">
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
+    
+    <button type="button" onclick="playMusic()">Play some JAMS</button>
 
     
     <embed src="chicken.mp3" loop="true" autostart="true" width="2" height="0">
