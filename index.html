@@ -57,20 +57,30 @@
     </script>
 
     <style type="text/css">
-        #text{
-         padding-bottom:10px;   
-        }
-        .column {
-          float: left;
-          width: 10%;
-          padding: 5px;
-        }
-        #meal{
-         height: 50px;   
+        #title{
+         height: 10%;   
         }
         #interrogate{
+            height: 20%;
             font-size:20px;
             font-style: italic;
+        }
+        #checkButton {
+              height: 10%;
+              background-color: #FF0000;
+              border: none;
+              color: white;
+              padding: 20px 42px;
+              text-align: right;
+              text-decoration: none;              
+              font-size: 16px;
+        }
+        #putBool{
+            height: 10%;
+        }
+        #troof {
+            height: 30%;
+            visibility: hidden;
         }
         #bigBird{
          visibility: hidden;
@@ -84,18 +94,21 @@
               text-decoration: none;
               font-size: 16px;
         }
-        #checkButton {
-            background-color: #FF0000;
-              border: none;
-              color: white;
-              padding: 20px 42px;
-              text-align: right;
-              text-decoration: none;              
-              font-size: 16px;
+        #foot{
+            
         }
-        #troof {
-            visibility: hidden;
+        .column {
+          float: left;
+          width: 10%;
+          padding: 5px;
         }
+        
+        #meal{
+         height: 50px;   
+        }
+        
+ 
+        
         
         body {
             background-color: green;
@@ -144,7 +157,7 @@
 
 <body>
 
-    <h1>Happy Holidays! Do you need chicken boulliun?</h1>
+    <h1 id = "title">Happy Holidays! Do you need chicken boulliun?</h1>
 
     <form id="interrogate">
         What are you making?
@@ -155,7 +168,7 @@
     
     <button type="button" id="checkButton" onclick="checkForBool()">Press me to see if you need billion</button>
     
-    <h2 id="interrogate" >Should you put builion in your meal?</h2>
+    <h2 id="putBool" >Should you put builion in your meal?</h2>
     <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
     
     <img id="bigBird" src="assets/chickengif.gif" alt="Dancing Bird" width="500">
@@ -164,13 +177,14 @@
     <button id="jams" type="button" onclick="playMusic()">Play some JAMS</button>
 
     
-
+    <div id="foot">
     <a class="column" id="gitLink" href="https://github.com/alexmiller522/Chicken-Boolean/">
     <img src="assets/github.png" alt="https://github.com/alexmiller522/Chicken-Boolean/" width="50" height="50">
     </a>
     <h2 class="column">#WomenMadeContent</h2>
     <img class="column" src="assets/ms.toe.png" alt="Miss L Toe" height="50px">
-    
+    </div>
+
 </body>
 
 </html>
