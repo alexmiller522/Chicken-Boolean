@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <head>
     <script>
+        
+        function onLoadFunctions() {
+            
+            
+             
+        }
+        
+        window.onload = onLoadFunctions;
+        
+        
+        var audio = new Audio('chicken.mp3');
+        
+        function playMusic(){
+            
+            if(audio.duration > 0 && !audio.paused){
+                audio.pause();
+            }else{
+                audio.play();
+            }
+            
+        }
+        
+        
         function checkForBool() {
-        var mealName = document.getElementById("meal");
-        if(mealName == "chicken buillon"){
-           alert("FALSE")
-           alert("YOU DO NOT NEED CHICKEN BUILLON!")
-           alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
-        }else{
-            alert("TRUE")
-            alert("This will taste SO GOOD with chicken boolean")
-            alert("You will disappoint guests without using chicken buillon")
+            var mealName = document.getElementById("meal").value;
+            if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
+               alert("FALSE")
+               alert("YOU DO NOT NEED CHICKEN BUILLON!")
+               alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
+            }else{
+                alert("TRUE")
+                alert("This will taste SO GOOD with chicken boolean")
+                alert("You will disappoint guests without using chicken buillon")
+            }
         }
-        }
+          
+        
     </script>
     
     <style type="text/css">
+        html {
+            cursor: url('drumstick.png'), auto;
+        }
+        
         body {
             background-color: green;
+            
         }
     </style>
 </head>
@@ -32,7 +62,12 @@
         <input id="meal" type="text" name="Fname">
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
-
+    <h2>Should you put builion in your meal?</h2>
+    <img class = "booleans" src="true.png" alt="TRUE">
+    <img class = "booleans" src="false.png" alt="FALSE">
+    
+    <button type="button" onclick="playMusic()">Play some JAMS</button>
+    
 </body>
 
 </html>
