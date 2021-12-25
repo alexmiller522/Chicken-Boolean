@@ -30,14 +30,14 @@
             
             if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
                //showing the true pic then spam with alert
-               document.getElementById("troof").style.src = "assets/true.png"
+               document.getElementById("troof").src = "assets/true.png"
                document.getElementById("troof").style.visibility = "visible"
                alert("FALSE")
                alert("YOU DO NOT NEED CHICKEN BUILLON!")
                alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
             }else{
                 //showing the false pic then spam with alert
-                document.getElementById("troof").style.src = "assets/false.png"
+                document.getElementById("troof").src = "assets/false.png"
                 document.getElementById("troof").style.visibility = "visible"
                 alert("TRUE")
                 alert("This will taste SO GOOD with chicken boolean")
@@ -49,6 +49,9 @@
     </script>
     
     <style type="text/css">
+        #troof {
+            visibility: hidden;
+        }
         
         body {
             background-color: green;
@@ -94,7 +97,7 @@
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
     <h2>Should you put builion in your meal?</h2>
-    <img id = "troof" class = "booleans" src="assets/true.png" alt="TRUE OR FALSE" visibility="hidden">
+    <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
     
     <button type="button" onclick="playMusic()">Play some JAMS</button>
     
