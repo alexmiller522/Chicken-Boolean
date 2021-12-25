@@ -57,6 +57,10 @@
     </script>
 
     <style type="text/css">
+        #interrogate{
+            font-size:20px;
+            font-style: italic;
+        }
         #bigBird{
          visibility: hidden;
         }
@@ -64,7 +68,7 @@
             position: absolute; 
             bottom: 0;    
         }
-        #jams{
+        button {
               background-color: #FF0000; /* Green */
               border: none;
               color: white;
@@ -127,26 +131,29 @@
 
     <h1>Happy Holidays! Do you need chicken boulliun?</h1>
 
-    <form>
+    <form id="interrogate">
         What are you making?
         <img id="arrow" src="assets/arrow.png" alt="arrow" width="700">
         <input id="meal" type="text" name="Fname">
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
-    <h2>Should you put builion in your meal?</h2>
+    <h2 id="interrogate" >Should you put builion in your meal?</h2>
     <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
     
     
     
     <button id="jams" type="button" onclick="playMusic()">Play some JAMS</button>
     <br></br>
+    
     <img id="bigBird" src="assets/chickengif.gif" alt="Dancing Bird" width="500">
     <br></br>
+
     <a id="gitLink" href="https://github.com/alexmiller522/Chicken-Boolean/">
     <img src="assets/github.png" alt="https://github.com/alexmiller522/Chicken-Boolean/" width="50" height="50">
+    <h2>#WomenMadeContent</h2>
+    <img src="assets/ms.toe.png" alt="Miss L Toe" width="200">
     </a>
-<h2>#WomenMadeContent</h2>
-    <img src="assets/ms.toe" alt="Miss L Toe" width="200">
+    
 </body>
 
 </html>
