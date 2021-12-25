@@ -63,23 +63,31 @@
           padding: 5px;
         }
         #meal{
-         height: 100px;   
+         height: 50px;   
         }
         #interrogate{
-            font-size:20px;
+            font-size:40px;
             font-style: italic;
         }
         #bigBird{
          visibility: hidden;
         }
-        button {
-              background-color: #FF0000; /* Green */
+        #jams {
+              background-color: #FF0000;
               border: none;
               color: white;
               padding: 30px 42px;
               text-align: right;
               text-decoration: none;
-              
+              font-size: 16px;
+        }
+        #checkButton {
+            background-color: #FF0000;
+              border: none;
+              color: white;
+              padding: 20px 42px;
+              text-align: right;
+              text-decoration: none;              
               font-size: 16px;
         }
         #troof {
@@ -142,7 +150,7 @@
     </form>
     <br></br>
     
-    <button type="button" onclick="checkForBool()">Press me to see if you need billion</button>
+    <button type="button" id="checkButton" onclick="checkForBool()">Press me to see if you need billion</button>
     
     <h2 id="interrogate" >Should you put builion in your meal?</h2>
     <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
