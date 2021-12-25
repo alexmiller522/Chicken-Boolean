@@ -13,13 +13,21 @@
 
 
         var audio = new Audio('assets/chicken.mp3');
+        audio.loop = true;
 
         function playMusic() {
-
+            var button = document.getElementById("jams");
+            
             if (audio.duration > 0 && !audio.paused) {
                 audio.pause();
+                button.innerText = "Please unpause me :("
+                //hide the big bird dancing
+                document.getElementById("bigBird").style.visibility = "hidden"
             } else {
                 audio.play();
+                button.innerText = "Press to pause musik"
+                //show the big bird dancing
+                document.getElementById("bigBird").style.visibility = "visible"
             }
 
         }
@@ -27,7 +35,6 @@
 
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
-            
             
             if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
                //showing the true pic then spam with alert
@@ -50,6 +57,9 @@
     </script>
 
     <style type="text/css">
+        #bigBird{
+         visibility: hidden;
+        }
         #gitLink {
             position: absolute; 
             bottom: 0;    
@@ -119,17 +129,24 @@
 
     <form>
         What are you making?
+        <img id="arrow" src="assets/arrow.png" alt="arrow" width="700">
         <input id="meal" type="text" name="Fname">
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
     <h2>Should you put builion in your meal?</h2>
     <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
     
-    <button id="jams" type="button" onclick="playMusic()">Play some JAMS</button>
     
-    <a href="https://github.com/alexmiller522/Chicken-Boolean/">
-    <img src="github.png" alt="https://github.com/alexmiller522/Chicken-Boolean/" width="50" height="50">
+    
+    <button id="jams" type="button" onclick="playMusic()">Play some JAMS</button>
+    <br></br>
+    <img id="bigBird" src="assets/chickengif.gif" alt="Dancing Bird" width="500">
+    <br></br>
+    <a id="gitLink" href="https://github.com/alexmiller522/Chicken-Boolean/">
+    <img src="assets/github.png" alt="https://github.com/alexmiller522/Chicken-Boolean/" width="50" height="50">
     </a>
+<h2>#WomenMadeContent</h2>
+    <img src="assets/ms.toe" alt="Miss L Toe" width="200">
 </body>
 
 </html>
