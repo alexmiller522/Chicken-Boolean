@@ -16,12 +16,17 @@
 
         function playMusic() {
             var button = document.getElementById("jams");
+            
             if (audio.duration > 0 && !audio.paused) {
                 audio.pause();
                 button.innerText = "Please unpause me :("
+                //hide the big bird dancing
+                document.getElementById("bigBird").style.visibility = "hidden"
             } else {
                 audio.play();
                 button.innerText = "Press to pause musik"
+                //show the big bird dancing
+                document.getElementById("bigBird").style.visibility = "visible"
             }
 
         }
@@ -29,9 +34,6 @@
 
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
-            //show the big bird dancing
-            var bigBird = document.getElementById("bigBird")
-            bigBird.style.visibility = "visible"
             
             if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
                //showing the true pic then spam with alert
