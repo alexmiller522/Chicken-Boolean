@@ -18,10 +18,10 @@
             var button = document.getElementById("jams");
             if (audio.duration > 0 && !audio.paused) {
                 audio.pause();
-                button.value = "Please unpause me :("
+                button.innerText = "Please unpause me :("
             } else {
                 audio.play();
-                button.value = "Press to pause musik"
+                button.innerText = "Press to pause musik"
             }
 
         }
