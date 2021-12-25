@@ -41,14 +41,38 @@
     </script>
     
     <style type="text/css">
-        html {
-            cursor: url('drumstick.png'), auto;
-        }
+        
         
         body {
             background-color: green;
             
         }
+        
+        html {
+            cursor: url('assets/cursor1.png'), auto;
+            animation: cursor 1s linear infinite;
+        }
+        
+        
+        @keyframes cursor{
+            0% { 
+                cursor: url('assets/cursor1.png'), auto;
+            }
+            25% { 
+                cursor: url('assets/cursor2.png'), auto;
+            }
+            50% { 
+                cursor: url('assets/cursor3.png'), auto;
+            }
+            75% { 
+                cursor: url('assets/cursor4.png'), auto;
+            }
+            100% { 
+                cursor: url('assets/cursor5.png'), auto;
+            }
+        }
+        
+        
     </style>
 </head>
 <html>
