@@ -27,11 +27,19 @@
 
         function checkForBool() {
             var mealName = document.getElementById("meal").value;
-            if (mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean")) {
-                alert("FALSE")
-                alert("YOU DO NOT NEED CHICKEN BUILLON!")
-                alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
-            } else {
+            
+            
+            if(mealName.includes("chicken") || mealName.includes("bouillon") || mealName.includes("boul") || mealName.includes("boil") || mealName.includes("boolean") ){
+               //showing the true pic then spam with alert
+               document.getElementById("troof").src = "assets/false.png"
+               document.getElementById("troof").style.visibility = "visible"
+               alert("FALSE")
+               alert("YOU DO NOT NEED CHICKEN BUILLON!")
+               alert("PRESS OKAY IF YOU REALIZE YOU SHOULD NOT USE CHICKEN BUILLLON WITH YOUR RECIPE!")
+            }else{
+                //showing the false pic then spam with alert
+                document.getElementById("troof").src = "assets/true.png"
+                document.getElementById("troof").style.visibility = "visible"
                 alert("TRUE")
                 alert("This will taste SO GOOD with chicken boolean")
                 alert("You will disappoint guests without using chicken buillon")
@@ -42,6 +50,20 @@
     </script>
 
     <style type="text/css">
+        #jams{
+              background-color: #FF0000; /* Green */
+              border: none;
+              color: white;
+              padding: 30px 42px;
+              text-align: right;
+              text-decoration: none;
+              
+              font-size: 16px;
+        }
+        #troof {
+            visibility: hidden;
+        }
+        
         body {
             background-color: green;
 
@@ -97,13 +119,10 @@
     </form>
     <button type="button" onclick="checkForBool()">Check</button>
     <h2>Should you put builion in your meal?</h2>
-    <img class="booleans" src="assets/true.png" alt="TRUE">
-    <img class="booleans" src="assets/false.png" alt="FALSE">
-
-    <button type="button" onclick="playMusic()">Play some JAMS</button>
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-    <a href="https://github.com/alexmiller522/Chicken-Boolean">
-        <img class="github" src="assets/github.png" alt="github logo">
+    <img id = "troof" src="assets/true.png" alt="TRUE OR FALSE">
+    
+    <button id="jams" type="button" onclick="playMusic()">Play some JAMS</button>
+    
 </body>
 
 </html>
