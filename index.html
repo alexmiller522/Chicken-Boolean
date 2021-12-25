@@ -15,11 +15,13 @@
         var audio = new Audio('assets/chicken.mp3');
 
         function playMusic() {
-
+            var button = document.getElementById("jams");
             if (audio.duration > 0 && !audio.paused) {
                 audio.pause();
+                button.value = "Please unpause me :("
             } else {
                 audio.play();
+                button.value = "Press to pause musik"
             }
 
         }
