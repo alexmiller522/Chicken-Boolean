@@ -18,6 +18,13 @@
             document.getElementById("squat").style.visibility = "visible"
             //make button disappear
             document.getElementById("magic8").style.visibility = "hidden"
+            setTimeout(magic8Back, 2000);
+        }
+        function magic8Back() {
+            //make gif show
+            document.getElementById("squat").style.visibility = "hidden"
+            //make button disappear
+            document.getElementById("magic8").style.visibility = "visible"
         }
 
         function playMusic() {
